@@ -13,11 +13,11 @@ class NestesdCollectionsTest < Minitest::Test
   end
 
   def test_2
-    skip
+
     coordinates = [[2,5],[87,2],[56,39],[3,46]]
     # Using the coordinates variable defined above
     # Retrive the value 39
-    thirty_nine = _________
+    thirty_nine = coordinates[2[1]]
     assert_equal 39, thirty_nine
   end
 
