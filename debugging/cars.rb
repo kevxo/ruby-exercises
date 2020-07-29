@@ -1,41 +1,41 @@
 class Car
-
-  attr_reader: color
-
-  def initialize
-    @ileage = 0
-    @wheel_count = 4
+  attr_reader :color, :mileage, :wheel_count
+  def initialize(color, mileage, wheel_count)
+    @color = color
+    @mileage = mileage
+    @wheel_count = wheel_count
   end
 
   def horn
     puts "BEEEEP"
   end
 
-  def drive()
-    @milage += distance
-    puts "I'm driving #{distance} miles!"
+  def drive(distance)
+    puts "I'm driving #{@mileage += distance} miles!"
   end
 
   def wheel_count
     "This ride is sitting on a sweet #{@wheel_count} wheels!"
   end
 
+  def started?
+    if @mileage > 0
+      true
+    else
+      false
+    end
+  end
+
   def start
-    if !@started
+    if !started?
       puts "Starting Up!"
-      @started = true
     else
       puts "Nope!"
     end
-
   end
-
-
-
 end
 
 
-my_car = Car.new
+my_car = Car.new("purple", 18, 4)
 my_car.drive(6)
-my_car.color = "purple"
 my_car.start
